@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import plugin from "tailwindcss/plugin";
 
 const config: Config = {
   content: [
@@ -7,14 +8,30 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
+    colors(util) {
+      return {
+        black: util.colors.black,
+        white: util.colors.white,
+        foreground: "rgba(var(--foreground))",
+        background: "rgba(var(--background))",
+        primary: "rgba(var(--primary))",
+      };
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ addUtilities }) {
+      const flexDirection = {
+        ".vertical": {
+          display: "flex",
+          "flex-direction": "column",
+        },
+        ".horizontal": {
+          display: "flex",
+          "flex-direction": "row",
+        },
+      };
+      addUtilities(flexDirection);
+    }),
+  ],
 };
 export default config;

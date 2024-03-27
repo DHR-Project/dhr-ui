@@ -1,3 +1,4 @@
+import cn from "@/utils/cn";
 import "./globals.css";
 
 import Provider from "@/components/templates/Provider";
@@ -15,7 +16,12 @@ export const metadata: Metadata = {
 export default function RootLayout(props: PropsWithChildren) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body
+        className={cn(
+          inter.className,
+          "bg-background text-foreground subpixel-antialiased"
+        )}
+      >
         <Provider>{props.children}</Provider>
       </body>
     </html>

@@ -8,13 +8,23 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    colors(util) {
+    extend: {
+      colors() {
+        return {
+          foreground: "rgba(var(--foreground))",
+          background: "rgba(var(--background))",
+          primary: "rgba(var(--primary))",
+        };
+      },
+    },
+    dropShadow() {
       return {
-        black: util.colors.black,
-        white: util.colors.white,
-        foreground: "rgba(var(--foreground))",
-        background: "rgba(var(--background))",
-        primary: "rgba(var(--primary))",
+        xs: "0 1px 2px rgba(16, 24, 40, 5%)",
+        "xs-focused": [
+          "0 1px 2px rgba(16, 24, 40, 5%)",
+          "4px 4px 0 rgba(255, 71, 11, 10%)",
+          "-4px -4px 0 rgba(255, 71, 11, 10%)",
+        ],
       };
     },
   },

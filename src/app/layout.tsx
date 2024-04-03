@@ -9,7 +9,7 @@ import { PropsWithChildren } from "react";
 const inter = Inter({ subsets: ["latin", "vietnamese"] });
 
 export const metadata: Metadata = {
-  title: "Distributed Human Resources",
+  title: "Food for everyone",
   description: "",
 };
 

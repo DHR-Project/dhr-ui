@@ -14,18 +14,18 @@ export default function ScrollArea(props: PropsWithChildren<IScrollAreaProps>) {
       className={cn("w-full h-screen overflow-hidden", props.className)}
       type="scroll"
     >
-      <RadixScrollArea.Viewport className="w-full h-full">
+      <RadixScrollArea.Viewport className="w-full h-full [&>div]:h-max">
         {props.children}
       </RadixScrollArea.Viewport>
       <RadixScrollArea.ScrollAreaScrollbar
         orientation="horizontal"
-        className="flex select-none touch-none h-2 py-0.5"
+        className="flex select-none touch-none h-2 py-0.5 z-20"
       >
         <RadixScrollArea.Thumb className="flex-1 bg-black/70 rounded-full" />
       </RadixScrollArea.ScrollAreaScrollbar>
       <RadixScrollArea.ScrollAreaScrollbar
         orientation="vertical"
-        className="flex select-none touch-none w-2 px-0.5"
+        className="flex select-none touch-none w-2 px-0.5 z-20"
       >
         <RadixScrollArea.Thumb className="flex-1 bg-black/70 rounded-full" />
       </RadixScrollArea.ScrollAreaScrollbar>

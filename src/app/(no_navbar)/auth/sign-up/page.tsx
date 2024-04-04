@@ -12,7 +12,7 @@ export default function SignUpPage() {
   return (
     <ScrollArea className="h-[calc(100dvh-370px)]">
       <PageWrapper asChild className="px-0">
-        <Form className="gap-5">
+        <Form className="gap-8">
           <div className="vertical gap-5 px-12">
             <Field name="email">
               <Label>Email</Label>

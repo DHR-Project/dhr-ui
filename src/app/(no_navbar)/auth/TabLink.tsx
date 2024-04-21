@@ -10,22 +10,28 @@ export default function TabLink() {
   const isSignUpPage = pathname === "/auth/sign-up";
 
   return (
-    <div className="horizontal w-full px-6 justify-center gap-4">
-      <Link href="login" className="font-semibold text-lg px-8 py-4 relative">
-        Login
+    <div className="horizontal gap-1 h-10 p-1 bg-gray-100 items-center justify-center rounded-lg shadow-xs-inset">
+      <Link
+        href="login"
+        className="horizontal items-center justify-center whitespace-nowrap px-3 py-1.5 text-sm font-medium relative focus:outline-secondary hover:bg-background rounded"
+      >
+        <span className="z-10">Login</span>
         {isLoginPage && (
           <motion.span
-            layoutId="underline"
-            className="absolute bottom-0 inset-x-0 border-b-2 border-primary"
+            layoutId="background"
+            className="absolute inset-0 bg-white rounded shadow-xs"
           />
         )}
       </Link>
-      <Link href="sign-up" className="font-semibold text-lg px-8 py-4 relative">
-        Signup
+      <Link
+        href="sign-up"
+        className="horizontal items-center justify-center whitespace-nowrap px-3 py-1.5 text-sm font-medium relative focus:outline-secondary hover:bg-background rounded"
+      >
+        <span className="z-10">Signup</span>
         {isSignUpPage && (
           <motion.span
-            layoutId="underline"
-            className="absolute bottom-0 inset-x-0 border-b-2 border-primary"
+            layoutId="background"
+            className="absolute inset-0 bg-white rounded shadow-xs"
           />
         )}
       </Link>

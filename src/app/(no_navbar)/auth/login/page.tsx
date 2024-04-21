@@ -12,7 +12,7 @@ import Link from "next/link";
 export default function LoginPage() {
   return (
     <PageWrapper asChild>
-      <Form>
+      <Form className="gap-5">
         <div className="vertical gap-4">
           <div className="vertical gap-8">
             <Field name="email">
@@ -41,7 +41,7 @@ export default function LoginPage() {
               <Message match="valueMissing">Please enter password</Message>
             </Field>
           </div>
-          <Link href="forgot-password" className="text-primary hover:underline">
+          <Link href="forgot-password" className="text-secondary underline">
             Forgot password?
           </Link>
         </div>

@@ -25,11 +25,11 @@ export default forwardRef<ElementRef<typeof Control>, ITextfieldProps>(
         data-disabled={props.disabled}
         {...slots?.wrapper}
         className={cn(
-          "horizontal gap-2 w-full bg-white px-3.5 py-2.5 rounded-lg ring-1 ring-gray-300 drop-shadow-xs",
+          "horizontal gap-2 w-full bg-white px-3.5 py-2.5 rounded-lg ring-1 ring-gray-300 shadow-xs",
           "items-center",
-          "[&:has(*[data-invalid=true])]:ring-red-300 [&:has(*[data-invalid=true]:focus)]:ring-red-500",
+          "[&:has(*[data-invalid=true])]:ring-red-300 [&:has(*[data-invalid=true]:focus)]:shadow-xs-focused-error",
           "data-[disabled=true]:bg-gray-50 data-[disabled=true]:text-gray-500",
-          "[&:has(*:focus)]:ring-2 [&:has(*:focus)]:ring-black/70",
+          "[&:has(*:focus)]:shadow-xs-focused",
           slots?.wrapper?.className
         )}
       >

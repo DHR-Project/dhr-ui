@@ -1,14 +1,14 @@
 import Container from "@/components/atoms/Container";
 import AppPageWrapper from "@/components/molecules/AppPageWrapper";
 import Toolbar from "@/components/molecules/Toolbar";
-import NoHistory from "@/components/templates/NoHistory";
+import NoOrder from "@/components/templates/NoOrder";
 
-export default function HistoryPage() {
+export default function OrdersPage() {
   return (
     <AppPageWrapper>
-      <Toolbar title="History" hasBack />
+      <Toolbar title="Orders" hasBack />
       <Container className="flex-1 horizontal">
-        <NoHistory />
+        <NoOrder />
       </Container>
     </AppPageWrapper>
   );

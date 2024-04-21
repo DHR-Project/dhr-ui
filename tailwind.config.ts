@@ -14,17 +14,19 @@ const config: Config = {
           foreground: "rgba(var(--foreground))",
           background: "rgba(var(--background))",
           primary: "rgba(var(--primary))",
+          secondary: "rgba(var(--secondary))",
+          licorice: "rgba(var(--licorice))",
         };
       },
     },
-    dropShadow() {
+    boxShadow() {
       return {
-        xs: "0 1px 2px rgba(16, 24, 40, 5%)",
-        "xs-focused": [
-          "0 1px 2px rgba(16, 24, 40, 5%)",
-          "4px 4px 0 rgba(255, 71, 11, 10%)",
-          "-4px -4px 0 rgba(255, 71, 11, 10%)",
-        ],
+        xs: "0 1px 2px 0 rgba(var(--licorice), 5%)",
+        "xs-inset": "0 1px 2px 0 rgba(var(--licorice), 5%) inset",
+        "xs-focused":
+          "0 1px 2px 0 rgba(var(--licorice), 5%), 0 0 0 4px rgba(var(--secondary), 10%)",
+        "xs-focused-error":
+          "0 1px 2px 0 rgba(var(--licorice), 5%), 0 0 0 4px rgba(254, 228, 226, 100%)",
       };
     },
   },

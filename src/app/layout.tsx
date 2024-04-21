@@ -4,7 +4,7 @@ import "./globals.css";
 import Provider from "@/components/templates/Provider";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { PropsWithChildren } from "react";
+import { PropsWithChildren, ReactNode } from "react";
 
 const inter = Inter({ subsets: ["latin", "vietnamese"] });
 
@@ -13,7 +13,12 @@ export const metadata: Metadata = {
   description: "",
 };
 
-export default function RootLayout(props: PropsWithChildren) {
+interface IRootLayoutProps {
+  modal?: ReactNode;
+  mobile?: ReactNode;
+}
+
+export default function RootLayout(props: PropsWithChildren<IRootLayoutProps>) {
   return (
     <html lang="en">
       <body
@@ -22,7 +27,10 @@ export default function RootLayout(props: PropsWithChildren) {
           "bg-background text-foreground subpixel-antialiased"
         )}
       >
-        <Provider>{props.children}</Provider>
+        <Provider>
+          {props.children}
+          <>{props.modal}</>
+        </Provider>
       </body>
     </html>
   );

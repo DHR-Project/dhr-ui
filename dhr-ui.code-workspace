@@ -67,6 +67,9 @@
     "[typescriptreact]": {
       "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "explorer.compactFolders": false
+    "explorer.compactFolders": false,
+    "files.associations": {
+      "*.css": "tailwindcss"
+    }
   }
 }

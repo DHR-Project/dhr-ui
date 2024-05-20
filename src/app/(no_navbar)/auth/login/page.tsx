@@ -7,7 +7,7 @@ import Field from "@/components/atoms/Form/Field";
 import Message from "@/components/atoms/Form/Message";
 import Submit from "@/components/atoms/Form/Submit";
 import { EnvelopeClosedIcon, LockClosedIcon } from "@radix-ui/react-icons";
-import Link from "next/link";
+import { Link } from "next-view-transitions";
 
 export default function LoginPage() {
   return (

@@ -1,5 +1,5 @@
 import { buttonVariants } from "@/components/atoms/Button";
-import Link from "next/link";
+import { Link } from "next-view-transitions";
 import { PropsWithChildren } from "react";
 
 export default function NoEntry(props: PropsWithChildren) {

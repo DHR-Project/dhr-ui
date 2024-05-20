@@ -1,27 +1,26 @@
 import Container from "@/components/atoms/Container";
-import Form, { Field, Textfield } from "@/components/atoms/Form";
 import AppPageWrapper from "@/components/molecules/AppPageWrapper";
 import Toolbar from "@/components/molecules/Toolbar";
+import SearchBar from "@/components/organisms/SearchBar";
+import SearchNotFound from "@/components/templates/SearchNotFound";
 
 export default function SearchPage() {
   return (
     <AppPageWrapper>
       <Toolbar
-        className="[&>.leading]:w-full [&_.leading]:items-center"
+        className="[&>.leading]:w-full [&_.leading]:items-center w-full"
         hasBack
         slots={{
           leading: (
             <div className="horizontal gap-2 items-center flex-1">
-              <Form method="GET" className="flex-1">
-                <Field name="search" autoFocus>
-                  <Textfield />
-                </Field>
-              </Form>
+              <SearchBar />
             </div>
           ),
         }}
       />
-      <Container>Search content</Container>
+      <Container className="h-full">
+        <SearchNotFound />
+      </Container>
     </AppPageWrapper>
   );
 }

@@ -2,7 +2,7 @@ import { buttonVariants } from "@/components/atoms/Button";
 import Logo from "@/components/atoms/Logo";
 import Page from "@/components/atoms/Page";
 import cn from "@/utils/cn";
-import Link from "next/link";
+import { Link } from "next-view-transitions";
 
 export default function GreetingPage() {
   return (

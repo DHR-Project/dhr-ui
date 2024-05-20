@@ -6,7 +6,7 @@ import {
   HomeIcon,
   InfoCircledIcon,
 } from "@radix-ui/react-icons";
-import Link from "next/link";
+import { Link } from "next-view-transitions";
 
 export default function NotFoundPage() {
   return (

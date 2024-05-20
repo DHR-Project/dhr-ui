@@ -8,14 +8,47 @@
   --primary: 250, 74, 12;
   --secondary: 99, 105, 209;
   --licorice: 13, 1, 6;
+  --border: 205, 205, 205;
+  --error: 239, 68, 68;
+  --focused-error: 255, 212, 212;
+  --input: 255, 255, 255;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground: 13, 1, 6;
-    --background: 251, 251, 255;
+    --foreground: 251, 251, 255;
+    --background: 0, 0, 0;
     --primary: 250, 74, 12;
     --secondary: 99, 105, 209;
     --licorice: 13, 1, 6;
+    --border: 72, 72, 72;
+    --error: 239, 68, 68;
+    --focused-error: 81, 0, 0;
+    --input: 0, 0, 0;
+  }
+}
+
+@layer base {
+  html {
+    text-size-adjust: 100%;
+  }
+  /* *,
+  ::before,
+  ::after {
+    @apply border-border;
+  } */
+}
+
+@layer components {
+  .top-navbar {
+    @apply horizontal backdrop-saturate-200 backdrop-blur-md bg-background/70 border-b;
+
+    .page-title {
+      @apply text-base font-semibold w-full line-clamp-1 text-center;
+    }
+  }
+
+  .navbar {
+    @apply border-t;
   }
 }

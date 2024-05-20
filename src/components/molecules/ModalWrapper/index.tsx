@@ -1,19 +1,22 @@
 "use client";
 
+import cn from "@/utils/cn";
 import { AnimatePresence, HTMLMotionProps, m } from "framer-motion";
-import { usePathname } from "next/navigation";
 
 const ModalWrapper = AnimatePresence;
 
 export default ModalWrapper;
 
 export const Modal = ({
-  href,
+  // href,
+  className,
   ...props
 }: HTMLMotionProps<"div"> & {
   href?: string;
 }) => {
-  const pathname = usePathname();
-
-  return <m.div {...props} />;
+  return (
+    <>
+      <m.div {...props} className={cn("", className)} />
+    </>
+  );
 };

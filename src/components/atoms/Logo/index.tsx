@@ -1,10 +1,10 @@
 import cn from "@/utils/cn";
-import Image from "next/image";
+import NextImage from "next/image";
 import { ComponentProps } from "react";
 
 interface ILogoProps {
   className?: string;
-  imageProps?: Omit<ComponentProps<typeof Image>, "src" | "alt">;
+  imageProps?: Omit<ComponentProps<typeof NextImage>, "src" | "alt">;
 }
 
 export default function Logo(props: ILogoProps) {
@@ -15,7 +15,7 @@ export default function Logo(props: ILogoProps) {
         props.className
       )}
     >
-      <Image
+      <NextImage
         src="/assets/logo.png"
         width={!props.imageProps?.fill ? 50 : undefined}
         height={!props.imageProps?.fill ? 50 : undefined}

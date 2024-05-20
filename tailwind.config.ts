@@ -16,6 +16,7 @@ const config: Config = {
           primary: "rgba(var(--primary))",
           secondary: "rgba(var(--secondary))",
           licorice: "rgba(var(--licorice))",
+          input: "rgba(var(--input))",
         };
       },
     },
@@ -24,11 +25,18 @@ const config: Config = {
         xs: "0 1px 2px 0 rgba(var(--licorice), 5%)",
         "xs-inset": "0 1px 2px 0 rgba(var(--licorice), 5%) inset",
         "xs-focused":
-          "0 1px 2px 0 rgba(var(--licorice), 5%), 0 0 0 4px rgba(var(--secondary), 10%)",
+          "0 1px 2px 0 rgba(var(--licorice), 15%), 0 0 0 4px rgba(var(--secondary), 10%)",
         "xs-focused-error":
-          "0 1px 2px 0 rgba(var(--licorice), 5%), 0 0 0 4px rgba(254, 228, 226, 100%)",
+          "0 1px 2px 0 rgba(var(--licorice), 5%), 0 0 0 4px rgba(var(--focused-error), 100%)",
       };
     },
+    ringColor: {
+      DEFAULT: "rgba(var(--border))",
+      error: "rgba(var(--error))"
+    },
+    borderColor: {
+      DEFAULT: "rgba(var(--border))",
+    }
   },
   plugins: [
     plugin(function ({ addUtilities }) {

@@ -1,7 +1,7 @@
 "use client";
 
 import cn from "@/utils/cn";
-import Link from "next/link";
+import { Link } from "next-view-transitions";
 import { usePathname } from "next/navigation";
 import { ComponentProps, PropsWithChildren } from "react";
 
@@ -16,7 +16,7 @@ export default function LinkItem({
     <Link
       {...props}
       className={cn(
-        "w-full px-3.5 py-2.5 rounded vertical justify-center items-center hover:bg-background relative",
+        "w-full px-3.5 py-2.5 rounded vertical justify-center items-center hover:bg-background/30 relative",
         pathname === props.href && "text-primary",
         className
       )}

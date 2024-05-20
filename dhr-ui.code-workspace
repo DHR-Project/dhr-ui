@@ -47,8 +47,8 @@
     },
 
     // Code
-    "editor.fontSize": 14,
-    "editor.lineHeight": 1.7,
+    "editor.fontSize": 13,
+    "editor.lineHeight": 1.4,
     "editor.fontLigatures": true,
 
     // Suggestions
@@ -70,6 +70,20 @@
     "explorer.compactFolders": false,
     "files.associations": {
       "*.css": "tailwindcss"
+    },
+
+    // Custom labels name
+    "workbench.editor.customLabels.patterns": {
+      "**/app/*.tsx": "${filename}.${extname} (root)",
+      "**/app/api/**/route.ts": "API: ${dirname(1)}/${dirname}",
+      "**/components/**/index.tsx": "${dirname} ∙ (${dirname(1)})component",
+      "**/app/**/page.tsx": "${dirname} ∙ page",
+      "**/app/**/[[]*[]]/page.tsx": "${dirname(1)} / ${dirname} ∙ page",
+      "**/app/**/[[]*[]]/[[]*[]]/page.tsx": "${dirname(2)} / ${dirname(1)} / ${dirname} ∙ page",
+      "**/app/**/layout.tsx": "${dirname} ∙ (${dirname(1)})layout",
+      "**/utils/index.*": "🧰 ∙ index",
+      "**/utils/*.*": "🧰 ∙ ${filename}.${extname}",
+      "**/hooks/*.{ts,tsx,js,jsx}": "🪝 ∙ ${filename}.${extname}"
     }
   }
 }

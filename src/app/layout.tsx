@@ -5,6 +5,7 @@ import Provider from "@/components/templates/Provider";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { PropsWithChildren, ReactNode } from "react";
+import { ViewTransitions } from "next-view-transitions";
 
 const inter = Inter({ subsets: ["latin", "vietnamese"] });
 
@@ -20,18 +21,20 @@ interface IRootLayoutProps {
 
 export default function RootLayout(props: PropsWithChildren<IRootLayoutProps>) {
   return (
-    <html lang="en">
-      <body
-        className={cn(
-          inter.className,
-          "bg-background text-foreground subpixel-antialiased"
-        )}
-      >
-        <Provider>
-          {props.children}
-          <>{props.modal}</>
-        </Provider>
-      </body>
-    </html>
+    <ViewTransitions>
+      <html lang="en">
+        <body
+          className={cn(
+            inter.className,
+            "bg-background text-foreground subpixel-antialiased"
+          )}
+        >
+          <Provider>
+            {props.children}
+            <>{props.modal}</>
+          </Provider>
+        </body>
+      </html>
+    </ViewTransitions>
   );
 }

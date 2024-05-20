@@ -42,7 +42,7 @@ export default function SignUpPage() {
         <div className="bg-amber-200 text-amber-900 px-3 py-2 rounded-lg mx-12">
           Work in progress!
         </div>
-        <div className="horizontal sticky bottom-0 inset-x-0 bg-white px-12">
+        <div className="horizontal sticky bottom-0 inset-x-0 px-12">
           <Submit asChild>
             <Button className="w-full" disabled>
               Sign up

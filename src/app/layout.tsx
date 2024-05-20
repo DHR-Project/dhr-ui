@@ -4,7 +4,7 @@ import "./globals.css";
 import Provider from "@/components/templates/Provider";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { PropsWithChildren, ReactNode } from "react";
+import { type ReactNode, type PropsWithChildren } from "react";
 import { ViewTransitions } from "next-view-transitions";
 
 const inter = Inter({ subsets: ["latin", "vietnamese"] });
@@ -15,8 +15,8 @@ export const metadata: Metadata = {
 };
 
 interface IRootLayoutProps {
-  modal?: ReactNode;
-  mobile?: ReactNode;
+  modal: ReactNode;
+  // mobile?: ReactNode;
 }
 
 export default function RootLayout(props: PropsWithChildren<IRootLayoutProps>) {
@@ -29,10 +29,7 @@ export default function RootLayout(props: PropsWithChildren<IRootLayoutProps>) {
             "bg-background text-foreground subpixel-antialiased"
           )}
         >
-          <Provider>
-            {props.children}
-            <>{props.modal}</>
-          </Provider>
+          <Provider>{props.children}</Provider>
         </body>
       </html>
     </ViewTransitions>

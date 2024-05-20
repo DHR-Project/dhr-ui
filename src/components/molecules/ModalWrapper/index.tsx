@@ -1,7 +1,7 @@
 "use client";
 
 import cn from "@/utils/cn";
-import { AnimatePresence, HTMLMotionProps, m } from "framer-motion";
+import { AnimatePresence, type HTMLMotionProps, m } from "framer-motion";
 
 const ModalWrapper = AnimatePresence;
 

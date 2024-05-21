@@ -1,5 +1,6 @@
 "use client";
 
+import Button from "@/components/atoms/Button";
 import cn from "@/utils/cn";
 import { ChevronLeftIcon } from "@radix-ui/react-icons";
 import { useRouter } from "next/navigation";
@@ -30,21 +31,22 @@ export default function Toolbar({
     <div
       className={cn(
         "top-navbar",
-        "px-12 py-4 items-center justify-between sticky top-0 inset-x-0 z-10",
+        "px-6 py-4 items-center justify-between sticky top-0 inset-x-0 z-10",
         className
       )}
     >
       {hasBack || props.slots?.leading ? (
         <div className="leading horizontal gap-2">
           {hasBack && (
-            <button
+            <Button
+              variant="icon"
               onClick={onBackPage}
               title="Back to previous page"
               type="button"
             >
               <ChevronLeftIcon width={26} height={26} />
               <span className="sr-only">Back to previous page</span>
-            </button>
+            </Button>
           )}
           {props.slots?.leading}
         </div>

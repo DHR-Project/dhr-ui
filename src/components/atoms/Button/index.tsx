@@ -11,6 +11,7 @@ const buttonVariants = cva(
         primary: "bg-primary hover:bg-primary/70 disabled:opacity-70",
         secondary:
           "bg-white/90 dark:bg-black-900 text-primary hover:bg-white disabled:bg-white/50 dark:disabled:bg-black-900/50",
+        icon: "p-1 outline-white/90",
       },
       rounded: {
         md: "rounded-md",

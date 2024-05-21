@@ -8,6 +8,7 @@
   --primary: 250, 74, 12;
   --secondary: 99, 105, 209;
   --licorice: 13, 1, 6;
+  --ring: 205, 205, 205;
   --border: 205, 205, 205;
   --error: 239, 68, 68;
   --focused-error: 255, 212, 212;
@@ -21,10 +22,11 @@
     --primary: 250, 74, 12;
     --secondary: 99, 105, 209;
     --licorice: 13, 1, 6;
+    --ring: 182, 182, 182;
     --border: 72, 72, 72;
     --error: 239, 68, 68;
     --focused-error: 81, 0, 0;
-    --input: 0, 0, 0;
+    --input: 60, 60, 60;
   }
 }
 

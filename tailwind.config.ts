@@ -31,7 +31,7 @@ const config: Config = {
       };
     },
     ringColor: {
-      DEFAULT: "rgba(var(--border))",
+      DEFAULT: "rgba(var(--ring))",
       error: "rgba(var(--error))"
     },
     borderColor: {

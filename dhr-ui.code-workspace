@@ -83,7 +83,9 @@
       "**/app/**/layout.tsx": "${dirname} ∙ (${dirname(1)})layout",
       "**/utils/index.*": "🧰 ∙ index",
       "**/utils/*.*": "🧰 ∙ ${filename}.${extname}",
-      "**/hooks/*.{ts,tsx,js,jsx}": "🪝 ∙ ${filename}.${extname}"
+      "**/hooks/*.{ts,tsx,js,jsx}": "🪝 ∙ ${filename}.${extname}",
+      "**/components/**/*.tsx": "${filename} ∙ (${dirname(1)})component",
+      "**/components/**/*.*": "${filename}.${extname} ∙ ${dirname}(${dirname(1)})component"
     }
   }
 }

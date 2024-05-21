@@ -1,5 +1,6 @@
 "use client";
 
+import Button from "@/components/atoms/Button";
 import Form, { Field, Textfield } from "@/components/atoms/Form";
 import { MagnifyingGlassIcon } from "@radix-ui/react-icons";
 import { Link } from "next-view-transitions";
@@ -9,17 +10,6 @@ interface ISearchBar {
 }
 
 export default function SearchBar({ clickable = false }: ISearchBar) {
-  if (clickable) {
-    return (
-      <Link href="/search" style={{ viewTransitionName: "SearchBar" }}>
-        <div className="justify-between horizontal items-center gap-2 w-full bg-input px-3.5 py-2.5 rounded-lg ring-1 shadow-xs">
-          <span className="text-gray-500">Search something...</span>
-          <MagnifyingGlassIcon width={24} height={24} />
-        </div>
-      </Link>
-    );
-  }
-
   return (
     <>
       <Form
@@ -27,20 +17,26 @@ export default function SearchBar({ clickable = false }: ISearchBar) {
         className="flex-1"
         style={{ viewTransitionName: "SearchBar" }}
       >
-        <Field name="search" autoFocus>
+        <Field name="search" autoFocus className="relative">
+          {clickable && <Link href="/search" className="absolute inset-0" />}
           <Textfield
             title="Search something..."
             placeholder="Search something..."
-            autoFocus
+            autoFocus={!clickable}
+            tabIndex={clickable ? -1 : undefined}
             slots={{
               trailing: (
-                <button type="submit" title="Search Icon">
+                <Button
+                  variant="icon"
+                  type="submit"
+                  title="Search Icon"
+                  tabIndex={clickable ? -1 : undefined}
+                >
                   <MagnifyingGlassIcon width={24} height={24} />
                   <span className="sr-only">Search Icon</span>
-                </button>
+                </Button>
               ),
             }}
-            // data-invalid
           />
         </Field>
       </Form>

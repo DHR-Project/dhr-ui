@@ -44,7 +44,7 @@ const Textfield = forwardRef<ElementRef<typeof Control>, ITextfieldProps>(
           title={title ?? props.name}
           className={cn(
             "bg-transparent w-full flex-1",
-            "placeholder:text-gray-500 text-base",
+            "placeholder:text-gray-500 dark:placeholder:text-gray-400 text-base",
             "focus:outline-none",
             className
           )}

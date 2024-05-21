@@ -1,15 +1,15 @@
 "use client";
 
 import cn from "@/utils/cn";
-import { Label as RadixLabel } from "@radix-ui/react-form";
+import { Label } from "@radix-ui/react-form";
 import { ComponentPropsWithoutRef, ElementRef, forwardRef } from "react";
 
-const Label = forwardRef<
-  ElementRef<typeof RadixLabel>,
-  ComponentPropsWithoutRef<typeof RadixLabel>
+const FieldLabel = forwardRef<
+  ElementRef<typeof Label>,
+  ComponentPropsWithoutRef<typeof Label>
 >(({ className, ...props }, ref) => {
   return (
-    <RadixLabel
+    <Label
       ref={ref}
       {...props}
       className={cn("text-gray-500 text-sm font-semibold", className)}
@@ -17,6 +17,6 @@ const Label = forwardRef<
   );
 });
 
-Label.displayName = "Label";
+FieldLabel.displayName = "FieldLabel";
 
-export default Label;
+export default FieldLabel;

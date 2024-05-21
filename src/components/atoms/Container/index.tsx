@@ -5,7 +5,7 @@ export default function Container(props: HTMLAttributes<HTMLDivElement>) {
   return (
     <div
       {...props}
-      className={cn("px-12 py-5 w-full mx-auto", props.className)}
+      className={cn("container px-6 py-4 w-full mx-auto", props.className)}
     />
   );
 }

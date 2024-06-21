@@ -2,16 +2,131 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground: 0, 0, 0;
-  --background: 242, 242, 242;
-  --primary: 250, 74, 12;
+@layer base {
+  html {
+    text-size-adjust: 100%;
+  }
+
+  :root {
+    /*
+     * background
+     */
+    --bg-primary: #ffffff;
+    --bg-secondary: #f2f2f7;
+    --bg-tertiary: #ffffff;
+    /* bg-elevated */
+    --bg-primary-elevated: #ffffff;
+    --bg-secondary-elevated: #f2f2f7;
+    --bg-tertiary-elevated: #ffffff;
+
+    /*
+     * Fill
+     */
+    --fill-primary: rgba(120, 120, 128, 20%);
+    --fill-secondary: rgba(120, 120, 128, 16%);
+    --fill-tertiary: rgba(118, 118, 128, 12%);
+    --fill-quaternary: rgba(116, 116, 128, 8%);
+
+    /*
+     * Label
+     */
+    --label-primary: #000000;
+    --label-secondary: rgba(60, 60, 67, 60%);
+    --label-tertiary: rgba(60, 60, 67, 30%);
+    --label-quaternary: rgba(60, 60, 67, 18%);
+
+    /*
+     * Separator
+     */
+    --separator: #c6c6c8;
+    --separator-non-opaque: rgba(60, 60, 67, 36%);
+
+    /*
+     * Material
+     */
+    --material-regular: rgba(240, 240, 240, 0.82);
+    --material-chrome: rgba(255, 255, 255, 0.75);
+
+    /*
+     * Colors
+     */
+    --accent: 255, 149, 0;
+    --system-red: #ff3b30;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root,
+    .dark:root {
+      /*
+      * background
+      */
+      --bg-primary: #000000;
+      --bg-secondary: #1c1c1e;
+      --bg-tertiary: #2c2c2e;
+      /* elevated */
+      --bg-primary-elevated: #1c1c1e;
+      --bg-secondary-elevated: #2c2c2e;
+      --bg-tertiary-elevated: #3a3a3c;
+
+      /*
+      * Fill
+      */
+      --fill-primary: rgba(120, 120, 128, 36%);
+      --fill-secondary: rgba(120, 120, 128, 32%);
+      --fill-tertiary: rgba(118, 118, 128, 24%);
+      --fill-quaternary: rgba(116, 116, 128, 18%);
+
+      /*
+      * Label
+      */
+      --label-primary: #ffffff;
+      --label-secondary: rgba(235, 235, 245, 60%);
+      --label-tertiary: rgba(235, 235, 245, 30%);
+      --label-quaternary: rgba(235, 235, 245, 16%);
+
+      /*
+      * Separator
+      */
+      --separator: #38383a;
+      --separator-non-opaque: rgba(84, 84, 88, 65%);
+
+      /*
+       * Material
+       */
+      --material-regular: rgba(37, 37, 37, 0.82);
+      --material-chrome: rgba(0, 0, 0, 0.75);
+
+      /*
+     * Colors
+     */
+      --accent: 255, 159, 10;
+      --system-red: #ff453a;
+    }
+  }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground: 0, 0, 0;
-    --background: 242, 242, 242;
-    --primary: 250, 74, 12;
+@layer components {
+  /*
+   * Material
+   */
+  .material-regular {
+    background-blend-mode: color-dodge, normal;
+    @apply backdrop-blur bg-material-regular;
+  }
+
+  .material-chrome {
+    background-blend-mode: color-dodge, normal;
+    @apply backdrop-blur bg-material-chrome;
+  }
+
+  .top-navbar {
+    @apply horizontal border-b border-none-opaque material-chrome;
+    .page-title {
+      @apply text-base font-semibold w-full line-clamp-1 text-center;
+    }
+  }
+
+  .tab-bar {
+    @apply border-t border-none-opaque material-chrome sticky inset-x-0 bottom-0 horizontal pt-1 pb-2 px-2 gap-4;
   }
 }

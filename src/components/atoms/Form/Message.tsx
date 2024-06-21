@@ -1,18 +1,22 @@
 "use client";
 
 import cn from "@/utils/cn";
-import { Message } from "@radix-ui/react-form";
+import { Message as RadixMessage } from "@radix-ui/react-form";
 import { ComponentPropsWithoutRef, ElementRef, forwardRef } from "react";
 
-export default forwardRef<
-  ElementRef<typeof Message>,
-  ComponentPropsWithoutRef<typeof Message>
+const Message = forwardRef<
+  ElementRef<typeof RadixMessage>,
+  ComponentPropsWithoutRef<typeof RadixMessage>
 >(({ className, ...props }, ref) => {
   return (
-    <Message
+    <RadixMessage
       ref={ref}
       {...props}
       className={cn("text-red-500 text-sm", className)}
     />
   );
 });
+
+Message.displayName = "Message";
+
+export default Message;

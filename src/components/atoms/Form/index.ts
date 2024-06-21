@@ -1,11 +1,11 @@
 import Form from "./Form";
-export * from "./Textfield";
-export * from "./Label";
-export * from "./Field";
-export * from "./Message";
-export * from "./Submit";
-export * from "./ValidityState";
+import Textfield from "./Textfield";
+import FieldLabel from "./FieldLabel";
+import Field from "./Field";
+import Message from "./Message";
+import Submit from "./Submit";
+import RadixValidityState from "./ValidityState";
 
-export { Form };
+export { Form, Textfield, FieldLabel, Field, Message, Submit, RadixValidityState as ValidityState };
 
 export default Form;

@@ -7,7 +7,7 @@ export async function middleware(request: NextRequest) {
   // Redirect first page to greeting
   // TODO: check authenticate
   if (request.nextUrl.pathname === "/") {
-    return NextResponse.redirect(new URL("/greeting", request.url));
+    return NextResponse.redirect(new URL("/home", request.url));
   }
 
   if (request.nextUrl.pathname === "/auth") {

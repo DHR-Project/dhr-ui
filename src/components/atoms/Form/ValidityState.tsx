@@ -1,5 +1,5 @@
 "use client";
 
-import { ValidityState } from "@radix-ui/react-form";
+import { ValidityState as RadixValidityState } from "@radix-ui/react-form";
 
-export default ValidityState;
+export default RadixValidityState;

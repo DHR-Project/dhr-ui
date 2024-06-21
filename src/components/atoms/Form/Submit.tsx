@@ -1,12 +1,16 @@
 "use client";
 
 import cn from "@/utils/cn";
-import { Submit } from "@radix-ui/react-form";
+import { Submit as RadixSubmit } from "@radix-ui/react-form";
 import { ComponentPropsWithoutRef, ElementRef, forwardRef } from "react";
 
-export default forwardRef<
-  ElementRef<typeof Submit>,
-  ComponentPropsWithoutRef<typeof Submit>
+const Submit = forwardRef<
+  ElementRef<typeof RadixSubmit>,
+  ComponentPropsWithoutRef<typeof RadixSubmit>
 >(({ className, ...props }, ref) => {
-  return <Submit ref={ref} {...props} className={cn("", className)} />;
+  return <RadixSubmit ref={ref} {...props} className={cn("", className)} />;
 });
+
+Submit.displayName = "Submit";
+
+export default Submit;

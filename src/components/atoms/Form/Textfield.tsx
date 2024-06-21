@@ -18,18 +18,22 @@ interface ITextfieldProps extends ComponentPropsWithoutRef<typeof Control> {
   }>;
 }
 
-export default forwardRef<ElementRef<typeof Control>, ITextfieldProps>(
+const Textfield = forwardRef<ElementRef<typeof Control>, ITextfieldProps>(
   ({ slots, className, title, ...props }, ref) => {
     return (
       <div
         data-disabled={props.disabled}
         {...slots?.wrapper}
         className={cn(
-          "horizontal gap-2 w-full bg-white px-3.5 py-2.5 rounded-lg ring-1 ring-gray-300 drop-shadow-xs",
-          "items-center",
-          "[&:has(*[data-invalid=true])]:ring-red-300 [&:has(*[data-invalid=true]:focus)]:ring-red-500",
-          "data-[disabled=true]:bg-gray-50 data-[disabled=true]:text-gray-500",
-          "[&:has(*:focus)]:ring-2 [&:has(*:focus)]:ring-black/70",
+          // Normal
+          "horizontal items-center gap-2 w-full bg-fill-quaternary px-2 py-2 rounded-[10px] ring-1 ring-transparent text-base text-label-primary shadow-xs",
+          // Error
+          "[&:has(*[data-invalid=true])]:ring-error [&:has(*[data-invalid=true]):has(*:focus)]:shadow-xs-focused-error",
+          // Disable
+          "data-[disabled=true]:opacity-50 data-[disabled=true]:bg-fill-tertiary",
+          // Focus
+          "[&:has(*:focus)]:shadow-xs-focused",
+          // Custom
           slots?.wrapper?.className
         )}
       >
@@ -39,8 +43,8 @@ export default forwardRef<ElementRef<typeof Control>, ITextfieldProps>(
           {...props}
           title={title ?? props.name}
           className={cn(
-            "bg-transparent w-full flex-1",
-            "placeholder:text-gray-500 text-base text-gray-900",
+            "bg-transparent w-full flex-1 text-label-primary",
+            "placeholder:text-label-tertiary placeholder:leading-[22px] placeholder:text-base",
             "focus:outline-none",
             className
           )}
@@ -50,3 +54,7 @@ export default forwardRef<ElementRef<typeof Control>, ITextfieldProps>(
     );
   }
 );
+
+Textfield.displayName = "Textfield";
+
+export default Textfield;

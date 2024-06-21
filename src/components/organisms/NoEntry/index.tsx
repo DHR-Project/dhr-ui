@@ -11,7 +11,7 @@ export default function NoEntry(props: PropsWithChildren) {
           Hit the orange button down below to <strong>Create</strong> an order
         </p>
       </div>
-      <Link href="/home" className={buttonVariants()}>
+      <Link href="/home" className={buttonVariants({ size: "lg" })}>
         Start Order
       </Link>
     </div>

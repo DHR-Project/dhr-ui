@@ -16,8 +16,8 @@ export default function LinkItem({
     <Link
       {...props}
       className={cn(
-        "w-full px-3.5 py-2.5 rounded vertical justify-center items-center hover:bg-background/30 relative",
-        pathname === props.href && "text-primary",
+        "w-full px-2 py-1 rounded vertical justify-center items-center relative text-label-secondary hover:bg-fill-primary",
+        pathname === props.href && "text-accent",
         className
       )}
     >

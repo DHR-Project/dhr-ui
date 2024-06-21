@@ -14,10 +14,12 @@ export default function LoginPage() {
   return (
     <AppPageWrapper
       id="Authenticate"
-      slotProps={{ className: "min-h-max h-full flex-1" }}
-      className="flex-1"
+      slotProps={{
+        className: "min-h-max h-full flex-1 md:h-auto md:w-80 md:mt-5",
+      }}
+      isExpanded
     >
-      <Container className="flex-1">
+      <Container className="flex-1 md:flex-none md:shadow-lg md:rounded-xl">
         <Form className="gap-5 h-full relative vertical justify-between">
           <div className="vertical gap-4">
             <div className="vertical gap-8">
@@ -28,7 +30,13 @@ export default function LoginPage() {
                   type="email"
                   required
                   slots={{
-                    leading: <EnvelopeClosedIcon width={20} height={20} />,
+                    leading: (
+                      <EnvelopeClosedIcon
+                        width={17}
+                        height={17}
+                        className="text-label-secondary"
+                      />
+                    ),
                   }}
                 />
                 <Message match="valueMissing">Please enter email</Message>
@@ -41,7 +49,13 @@ export default function LoginPage() {
                   required
                   type="password"
                   slots={{
-                    leading: <LockClosedIcon width={20} height={20} />,
+                    leading: (
+                      <LockClosedIcon
+                        width={17}
+                        height={17}
+                        className="text-label-secondary"
+                      />
+                    ),
                   }}
                 />
                 <Message match="valueMissing">Please enter password</Message>
@@ -52,9 +66,13 @@ export default function LoginPage() {
             </Link>
           </div>
 
-          <Submit className="horizontal" asChild>
-            <Button className="w-full">Login</Button>
-          </Submit>
+          <div className="vertical gap-4">
+            <Submit className="horizontal" asChild>
+              <Button variant="filled" size="lg">
+                Login
+              </Button>
+            </Submit>
+          </div>
         </Form>
       </Container>
     </AppPageWrapper>

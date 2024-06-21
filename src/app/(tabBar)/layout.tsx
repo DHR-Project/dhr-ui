@@ -1,5 +1,5 @@
 import AppPageWrapper from "@/components/molecules/AppPageWrapper";
-import Navbar from "@/components/organisms/Navbar";
+import TabBar from "@/components/organisms/TabBar";
 import { PropsWithChildren } from "react";
 
 export default function NBGroupLayout(props: PropsWithChildren) {
@@ -7,7 +7,7 @@ export default function NBGroupLayout(props: PropsWithChildren) {
     <>
       <AppPageWrapper>
         {props.children}
-        <Navbar />
+        <TabBar />
       </AppPageWrapper>
     </>
   );

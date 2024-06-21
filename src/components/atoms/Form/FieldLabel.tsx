@@ -12,7 +12,7 @@ const FieldLabel = forwardRef<
     <Label
       ref={ref}
       {...props}
-      className={cn("text-gray-500 text-sm font-semibold", className)}
+      className={cn("text-sm font-semibold text-label-primary ml-2", className)}
     />
   );
 });

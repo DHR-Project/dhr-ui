@@ -12,10 +12,12 @@ export default function SignUpPage() {
   return (
     <AppPageWrapper
       id="Sign up"
-      className="flex-1"
-      slotProps={{ className: "min-h-max h-full flex-1" }}
+      slotProps={{
+        className: "min-h-max h-full flex-1 md:h-auto md:w-80 md:mt-5",
+      }}
+      isExpanded
     >
-      <Container className="flex-1">
+      <Container className="flex-1 md:flex-none md:shadow-lg md:rounded-xl">
         <Form className="gap-5 vertical flex-1 justify-between h-full">
           <div className="vertical gap-5">
             <Field name="email">
@@ -54,7 +56,7 @@ export default function SignUpPage() {
           </div>
           <div className="horizontal">
             <Submit asChild>
-              <Button className="w-full" disabled>
+              <Button size="lg" variant="filled" className="w-full" disabled>
                 Sign up
               </Button>
             </Submit>

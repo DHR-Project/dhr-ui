@@ -5,9 +5,9 @@ import {
 } from "@radix-ui/react-icons";
 import LinkItem from "./LinkItem";
 
-export default function Navbar() {
+export default function TabBar() {
   return (
-    <nav className="navbar sticky inset-x-0 bottom-0 horizontal items-center justify-around px-12 py-2 bg-background/70 backdrop-blur-md backdrop-saturate-200">
+    <div className="tab-bar">
       <LinkItem href="/home">
         <HomeIcon width={24} height={24} />
         <span className="text-xs">Home</span>
@@ -20,6 +20,6 @@ export default function Navbar() {
         <CounterClockwiseClockIcon width={24} height={24} />
         <span className="text-xs">History</span>
       </LinkItem>
-    </nav>
+    </div>
   );
 }

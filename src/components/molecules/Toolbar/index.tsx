@@ -39,12 +39,13 @@ export default function Toolbar({
         <div className="leading horizontal gap-2">
           {hasBack && (
             <Button
-              variant="icon"
               onClick={onBackPage}
               title="Back to previous page"
               type="button"
+              isSymbol
+              size="sm"
             >
-              <ChevronLeftIcon width={26} height={26} />
+              <ChevronLeftIcon width={22} height={22} />
               <span className="sr-only">Back to previous page</span>
             </Button>
           )}

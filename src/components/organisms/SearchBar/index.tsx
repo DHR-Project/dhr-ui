@@ -27,12 +27,16 @@ export default function SearchBar({ clickable = false }: ISearchBar) {
             slots={{
               trailing: (
                 <Button
-                  variant="icon"
+                  isSymbol
                   type="submit"
                   title="Search Icon"
                   tabIndex={clickable ? -1 : undefined}
                 >
-                  <MagnifyingGlassIcon width={24} height={24} />
+                  <MagnifyingGlassIcon
+                    width={18}
+                    height={18}
+                    className="text-label-secondary"
+                  />
                   <span className="sr-only">Search Icon</span>
                 </Button>
               ),

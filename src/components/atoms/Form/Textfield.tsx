@@ -26,11 +26,11 @@ const Textfield = forwardRef<ElementRef<typeof Control>, ITextfieldProps>(
         {...slots?.wrapper}
         className={cn(
           // Normal
-          "horizontal items-center gap-2 w-full bg-input px-3.5 py-2.5 rounded-lg ring-1 shadow-xs",
+          "horizontal items-center gap-2 w-full bg-fill-quaternary px-2 py-2 rounded-[10px] ring-1 ring-transparent text-base text-label-primary shadow-xs",
           // Error
-          "[&:has(*[data-invalid=true])]:ring-error [&:has(*[data-invalid=true]:focus)]:shadow-xs-focused-error",
+          "[&:has(*[data-invalid=true])]:ring-error [&:has(*[data-invalid=true]):has(*:focus)]:shadow-xs-focused-error",
           // Disable
-          "data-[disabled=true]:bg-gray-50 data-[disabled=true]:text-gray-500",
+          "data-[disabled=true]:opacity-50 data-[disabled=true]:bg-fill-tertiary",
           // Focus
           "[&:has(*:focus)]:shadow-xs-focused",
           // Custom
@@ -43,8 +43,8 @@ const Textfield = forwardRef<ElementRef<typeof Control>, ITextfieldProps>(
           {...props}
           title={title ?? props.name}
           className={cn(
-            "bg-transparent w-full flex-1",
-            "placeholder:text-gray-500 dark:placeholder:text-gray-400 text-base",
+            "bg-transparent w-full flex-1 text-label-primary",
+            "placeholder:text-label-tertiary placeholder:leading-[22px] placeholder:text-base",
             "focus:outline-none",
             className
           )}

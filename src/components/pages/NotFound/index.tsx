@@ -22,9 +22,9 @@ export default function NotFoundPage() {
           href="/home"
           className={cn(
             buttonVariants({
-              variant: "secondary",
-              className:
-                "px-3.5 py-2.5 rounded-lg horizontal gap-2 items-center",
+              variant: "borderless",
+              size: "lg",
+              className: "gap-2",
             })
           )}
         >
@@ -35,9 +35,9 @@ export default function NotFoundPage() {
           href="/home"
           className={cn(
             buttonVariants({
-              variant: "primary",
-              className:
-                "px-3.5 py-2.5 rounded-lg horizontal gap-2 items-center",
+              variant: "filled",
+              size: "lg",
+              className: "gap-2",
             })
           )}
         >

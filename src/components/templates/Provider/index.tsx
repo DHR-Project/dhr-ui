@@ -6,7 +6,7 @@ import { ThemeProvider } from "next-themes";
 
 function Provider(props: PropsWithChildren) {
   return (
-    <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+    <ThemeProvider enableSystem attribute="class" defaultTheme="system">
       <MotionConfig reducedMotion="user">{props.children}</MotionConfig>
     </ThemeProvider>
   );

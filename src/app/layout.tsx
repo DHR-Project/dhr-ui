@@ -22,11 +22,11 @@ interface IRootLayoutProps {
 export default function RootLayout(props: PropsWithChildren<IRootLayoutProps>) {
   return (
     <ViewTransitions>
-      <html lang="en">
+      <html lang="en" suppressHydrationWarning>
         <body
           className={cn(
             inter.className,
-            "bg-background text-foreground subpixel-antialiased"
+            "bg-material-chrome text-label-primary subpixel-antialiased bg-blend-hard-light"
           )}
         >
           <Provider>{props.children}</Provider>

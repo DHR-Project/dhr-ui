@@ -9,6 +9,7 @@ import { EnvelopeClosedIcon, LockClosedIcon } from "@radix-ui/react-icons";
 import { Link } from "next-view-transitions";
 import AppPageWrapper from "@/components/molecules/AppPageWrapper";
 import Container from "@/components/atoms/Container";
+import Typography from "@/components/atoms/Typography";
 
 export default function LoginPage() {
   return (
@@ -21,8 +22,8 @@ export default function LoginPage() {
     >
       <Container className="flex-1 md:flex-none md:shadow-lg md:rounded-xl">
         <Form className="gap-5 h-full relative vertical justify-between">
-          <div className="vertical gap-4">
-            <div className="vertical gap-8">
+          <div className="vertical gap-8">
+            <div className="vertical gap-6">
               <Field name="email">
                 <FieldLabel>Email</FieldLabel>
                 <Textfield
@@ -61,9 +62,23 @@ export default function LoginPage() {
                 <Message match="valueMissing">Please enter password</Message>
               </Field>
             </div>
-            <Link href="forgot-password" className="text-secondary underline">
-              Forgot password?
-            </Link>
+            <div>
+              <Typography asChild style="subheadline" color="link">
+                <Link href="forgot-password" className="underline">
+                  Forgot password?
+                </Link>
+              </Typography>
+              <div>
+                <Typography style="subheadline" color="tertiary">
+                  Don't have an account?
+                </Typography>{" "}
+                <Typography asChild color="tertiary">
+                  <Link href="sign-up" className="underline">
+                    Create a new one.
+                  </Link>
+                </Typography>
+              </div>
+            </div>
           </div>
 
           <div className="vertical gap-4">

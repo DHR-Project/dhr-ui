@@ -118,7 +118,111 @@
     background-blend-mode: color-dodge, normal;
     @apply backdrop-blur bg-material-chrome;
   }
+  /*
+   * Text style
+   */
+  .large-title {
+    /* Large Title/Regular */
+    font-style: normal;
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 41px;
+    /* identical to box height, or 121% */
+    letter-spacing: 0.4px;
+  }
+  .title1 {
+    /* Title1/Regular */
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 34px;
+    /* identical to box height, or 121% */
+    letter-spacing: 0.38px;
+  }
+  .title2 {
+    /* Title2/Regular */
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 28px;
+    /* identical to box height, or 127% */
+    letter-spacing: -0.26px;
+  }
+  .title3 {
+    /* Title3/Regular */
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+    /* identical to box height, or 125% */
+    letter-spacing: -0.45px;
+  }
+  .headline {
+    /* Headline/Regular */
+    font-style: normal;
+    font-weight: 590;
+    font-size: 17px;
+    line-height: 22px;
+    /* identical to box height, or 129% */
+    letter-spacing: -0.43px;
+  }
+  .typography-body {
+    /* Body/Regular */
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 22px;
+    /* identical to box height, or 129% */
+    letter-spacing: -0.43px;
+  }
+  .callout {
+    /* Callout/Regular */
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    /* identical to box height, or 131% */
+    letter-spacing: -0.31px;
+  }
+  .subheadline {
+    /* Subheadline/Regular */
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    /* identical to box height, or 133% */
+    letter-spacing: -0.23px;
+  }
+  .footnote {
+    /* Footnote/Regular */
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    /* identical to box height, or 138% */
+    letter-spacing: -0.08px;
+  }
+  .caption1 {
+    /* Caption1/Regular */
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    /* identical to box height, or 133% */
+  }
+  .caption2 {
+    /* Caption2/Regular */
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 13px;
+    /* identical to box height, or 118% */
+    letter-spacing: 0.06px;
+  }
 
+  /*
+   * 
+   */
   .top-navbar {
     @apply horizontal border-b border-none-opaque material-chrome;
     .page-title {

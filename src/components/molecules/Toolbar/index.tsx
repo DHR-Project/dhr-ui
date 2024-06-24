@@ -1,6 +1,7 @@
 "use client";
 
 import Button from "@/components/atoms/Button";
+import Typography from "@/components/atoms/Typography";
 import cn from "@/utils/cn";
 import { ChevronLeftIcon } from "@radix-ui/react-icons";
 import { useRouter } from "next/navigation";
@@ -55,7 +56,16 @@ export default function Toolbar({
 
       {props.title || props.children ? (
         <div className="horizontal gap-2 flex-1">
-          {props.title && <h1 className="page-title">{props.title}</h1>}
+          {props.title && (
+            <Typography
+              asChild
+              style="headline"
+              variant="emphasized"
+              className="page-title"
+            >
+              <h1>{props.title}</h1>
+            </Typography>
+          )}
           {props.children}
         </div>
       ) : null}

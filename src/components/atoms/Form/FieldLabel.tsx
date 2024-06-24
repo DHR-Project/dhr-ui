@@ -3,17 +3,21 @@
 import cn from "@/utils/cn";
 import { Label } from "@radix-ui/react-form";
 import { ComponentPropsWithoutRef, ElementRef, forwardRef } from "react";
+import Typography from "../Typography";
 
 const FieldLabel = forwardRef<
   ElementRef<typeof Label>,
   ComponentPropsWithoutRef<typeof Label>
 >(({ className, ...props }, ref) => {
   return (
-    <Label
-      ref={ref}
-      {...props}
-      className={cn("text-sm font-semibold text-label-primary ml-2", className)}
-    />
+    <Typography
+      asChild
+      color="primary"
+      variant="emphasized"
+      style="subheadline"
+    >
+      <Label ref={ref} {...props} className={cn("ml-2", className)} />
+    </Typography>
   );
 });
 

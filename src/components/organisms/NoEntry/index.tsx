@@ -1,4 +1,5 @@
 import { buttonVariants } from "@/components/atoms/Button";
+import Typography from "@/components/atoms/Typography";
 import { Link } from "next-view-transitions";
 import { PropsWithChildren } from "react";
 
@@ -7,9 +8,9 @@ export default function NoEntry(props: PropsWithChildren) {
     <div className="vertical flex-1">
       <div className="vertical flex-1 items-center justify-center text-center">
         {props.children}
-        <p className="font-light text-gray-500 mt-4">
+        <Typography style="callout" color="secondary" className="mt-4">
           Hit the orange button down below to <strong>Create</strong> an order
-        </p>
+        </Typography>
       </div>
       <Link href="/home" className={buttonVariants({ size: "lg" })}>
         Start Order

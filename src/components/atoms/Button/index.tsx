@@ -65,6 +65,7 @@ const Button = forwardRef<HTMLButtonElement, IButtonProps>(function (
     onMaterial,
     isSymbol = false,
     circle = false,
+    type = "button",
     className,
     children,
     ...props
@@ -74,6 +75,7 @@ const Button = forwardRef<HTMLButtonElement, IButtonProps>(function (
   return (
     <button
       ref={ref}
+      type={type}
       className={cn(
         "",
         buttonVariants({ size, variant, className }),

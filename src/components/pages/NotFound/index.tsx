@@ -1,5 +1,6 @@
 import { buttonVariants } from "@/components/atoms/Button";
 import Page from "@/components/atoms/Page";
+import Typography from "@/components/atoms/Typography";
 import cn from "@/utils/cn";
 import {
   ChevronLeftIcon,
@@ -12,11 +13,15 @@ export default function NotFoundPage() {
   return (
     <Page className="h-screen w-sceen vertical items-center justify-center px-12 text-center gap-4">
       <InfoCircledIcon width={122} height={122} className="text-[#BABABA]" />
-      <h1 className="text-3xl font-bold">404, Not Found!</h1>
-      <p className="text-base font-light text-gray-500">
-        Something wrong with this resource, please try again or contact with
-        Administrator.
-      </p>
+      <Typography asChild style="largeTitle" variant="emphasized">
+        <h1>404, Not Found!</h1>
+      </Typography>
+      <Typography asChild style="subheadline" color="secondary">
+        <p>
+          Something wrong with this resource, please try again or contact with
+          Administrator.
+        </p>
+      </Typography>
       <div className="horizontal gap-5 mt-5">
         <Link
           href="/home"
@@ -29,7 +34,7 @@ export default function NotFoundPage() {
           )}
         >
           <ChevronLeftIcon />
-          <span>Back</span>
+          <Typography className="text-accent">Back</Typography>
         </Link>
         <Link
           href="/home"
@@ -42,7 +47,7 @@ export default function NotFoundPage() {
           )}
         >
           <HomeIcon />
-          <span>Home</span>
+          <Typography className="text-white">Home</Typography>
         </Link>
       </div>
     </Page>
